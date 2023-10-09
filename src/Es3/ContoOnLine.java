@@ -16,16 +16,18 @@ public class ContoOnLine extends ContoCorrente {
     }
 
     void preleva(double x) {
-        try {
+        //try {
             if (x > maxPrelievo) {
+                nMovimenti++;
                 throw new BancaException("il prelievo non è disponibile");
             } else {
                 super.preleva(x);
             }
-            } catch (BancaException ex) {
+            }
+            /*catch (BancaException ex) {
             System.err.println(ex.getMessage());
         } catch (Exception ex) {
             System.err.println("errore generi");
         }
-        }
+        }*/
     }

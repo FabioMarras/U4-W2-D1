@@ -29,7 +29,8 @@ public class ContoCorrente {
                 nMovimenti++;
                 System.out.println(nMovimenti);
             }
-        } catch (BancaException ex) {
+        }
+        catch (BancaException ex) {
             System.err.println(ex.getMessage());
         } catch (Exception ex) {
             System.err.println("errore generic");
